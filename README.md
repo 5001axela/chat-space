@@ -1,24 +1,41 @@
-# README
+#Messagesテーブル
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+|Column|Type|Options|
+|------|----|-------|
+|body|text|------|
+|image|string|------|
+|user|references|foreign_key: true|
+|group|references|foreign_key: true|
 
-Things you may want to cover:
+##Association
+- belongs_to :user
+- belongs_to :group
 
-* Ruby version
+#usersテーブル
 
-* System dependencies
+|column|Type|Options|
+|------|----|-------|
+|user_name|string|null: false|
 
-* Configuration
+###Gem devise
 
-* Database creation
+##Association
+- has_many :messages
+- has_many :group, through: :member
 
-* Database initialization
+#groupsテーブル
 
-* How to run the test suite
+|column|Type|Options|
+|------|----|-------|
+|group_name|string|null: false|
 
-* Services (job queues, cache servers, search engines, etc.)
+##Association
+- has_many :messages
+- has_many :user, through: :member 
 
-* Deployment instructions
+#membersテーブル
 
-* ...
+|coloumn|Type|Options|
+|-------|----|-------|
+|user|references|foreign_key: true|
+|group|references|foreign_key: true|
