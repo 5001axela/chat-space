@@ -21,7 +21,7 @@
 
 ##Association
 - has_many :messages
-- has_many :group, through: :member
+- has_many :groups, through: :member
 
 #groupsテーブル
 
@@ -31,7 +31,7 @@
 
 ##Association
 - has_many :messages
-- has_many :user, through: :member 
+- has_many :users, through: :member 
 
 #membersテーブル
 
@@ -39,3 +39,7 @@
 |-------|----|-------|
 |user|references|foreign_key: true|
 |group|references|foreign_key: true|
+
+##Association
+- belongs_to :user
+- belongs_to :group
