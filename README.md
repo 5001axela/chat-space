@@ -15,13 +15,12 @@
 
 |column|Type|Options|
 |------|----|-------|
-|user_name|string|null: false|
-
-###Gem devise
+|name|string|null: false|
 
 ##Association
 - has_many :messages
-- has_many :groups, through: :member
+- has_many :members
+- has_many :groups, through: :members
 
 #groupsテーブル
 
@@ -31,7 +30,8 @@
 
 ##Association
 - has_many :messages
-- has_many :users, through: :member 
+- has_many :members
+- has_many :users, through: :members
 
 #membersテーブル
 
