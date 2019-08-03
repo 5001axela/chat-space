@@ -1,0 +1,144 @@
+body{
+  height: 100vh; 
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+.contents {
+  display: flex;
+  height: 100vh; 
+  width: 100vw;
+  margin: 0;
+}
+.leftcontents {
+  width: 300px;
+  height: 100%;
+  color: #FFFFFF;
+  font-weight: bold;
+  margin: 0;
+  background-color: #2f3e51;
+  &__set {
+    height: 100px;
+      background-color: #253141;
+      line-height: 100px;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+    &__nickname{
+      font-size: 16px;
+    }
+  }
+  &__group{
+    padding: 20px 20px 0 20px;
+    &__set{
+      &__name{
+        font-size: 15px;
+        margin-bottom: 5px;
+      }
+      &__coment{
+        font-size: 11px;
+        margin-bottom: 40px;
+      } 
+    }
+  }
+}
+.rightcontents {
+  width: calc(100% - 300px);
+  height: 100%;
+  margin: 0;
+  &__top {
+    line-height: 100px;
+    height: 100px;
+    padding: 0 40px;
+    border :#eeeeee;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 1px #eeeeee;
+    &__left {
+      &__group {
+        height: 20px;
+        font-size: 20px;
+        color :#333333;
+        margin-bottom: 15px;
+      }
+      &__name {
+        font-size: 12px;
+        color :#999999;
+      }
+    }
+    &__right {
+      &__edit {
+        height: 40px;
+        padding: 0 20px;
+        margin-top: 28px;
+        line-height: 40px;
+        color: #38AEF0;
+        border: solid 1px #38AEF0;
+      }
+    }
+  }
+  &__main {
+    background-color: #fafafa;
+    padding: 46px 40px 0 40px;
+    height: calc(100vh - 236px);
+    &__set {
+      display: flex;
+      &__name {
+        font-size: 16px;
+        margin-right: 10px;
+        color: #434A54;
+        font-weight: bold;
+      }
+      &__time {
+        font-size: 12px;
+        color: #999999;
+        margin-bottom: 10px;
+      }
+    }
+    &__coment {
+        font-size: 14px;
+        color: #434A54;
+        margin-bottom: 40px;
+    }
+  }
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ddd;
+    padding: 20px 40px;
+    &__text {
+      height: 50px;
+      width: calc(100% - 100px);
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      input {
+        width: 100%;
+        font-size: 16px;
+        color: #434A54;
+        padding: 0px 10px;
+        margin-right: 15px;
+      }
+        &__image{
+           i {
+            position: absolute;
+            right: 25px;
+            line-height: 50px;
+            height: 50px;
+          }
+          input {
+            display: none;
+          }
+        }
+    }
+    &__send {
+      height: 50px;
+      &__btn {
+        background-color: #38AEF0;
+        height: 50px;
+        width: 100px;
+        color: #FFFFFF;
+      }
+    }
+  }
+}

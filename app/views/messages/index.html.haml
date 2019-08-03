@@ -1,0 +1,61 @@
+.contents
+  .leftcontents
+    .leftcontents__set
+      .leftcontents__set__nickname
+        ニックネーム
+      .leftcontents__set__edit-cog
+        = fa_icon 'edit'
+        = fa_icon 'cog'
+    .leftcontents__group
+
+      .leftcontents__group__set
+        .leftcontents__group__set__name
+          グループネーム１
+        .leftcontents__group__set__coment
+          コメント１
+
+      .leftcontents__group__set
+        .leftcontents__group__set__name
+          グループネーム2
+        .leftcontents__group__set__coment
+          コメント2    
+
+  .rightcontents
+    .rightcontents__top
+      .rightcontents__top__left
+        .rightcontents__top__left__group
+          グループネーム(メイン)
+        .rightcontents__top__left__name
+          Member: ニックネーム
+      .rightcontents__top__right
+        .rightcontents__top__right__edit
+          Edit
+
+    .rightcontents__main
+      .rightcontents__main__set
+        .rightcontents__main__set__name
+          ニックネーム1
+        .rightcontents__main__set__time
+          2019/10/18(金) 05:30
+      .rightcontents__main__coment
+        コメント1
+
+      .rightcontents__main__set
+        .rightcontents__main__set__name
+          ニックネーム2
+        .rightcontents__main__set__time
+          2019/10/18(金) 09:30
+      .rightcontents__main__coment
+        コメント2
+
+    .rightcontents__bottom
+      .rightcontents__bottom__text
+        %input{:type => "text", :placeholder => "type a message"}
+        .rightcontents__bottom__text__image
+          %label
+            = fa_icon "image"
+            %input{:type => "file"}
+      .rightcontents__bottom__send
+        <input type="submit" value="Send" class="rightcontents__bottom__send__btn">
+
+
