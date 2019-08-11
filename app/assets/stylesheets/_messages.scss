@@ -14,7 +14,6 @@ body{
   width: 300px;
   height: 100%;
   color: #FFFFFF;
-  font-weight: bold;
   margin: 0;
   background-color: #2f3e51;
   &__set {
@@ -26,18 +25,34 @@ body{
       justify-content: space-between;
     &__nickname{
       font-size: 16px;
+      font-weight: bold;
+    }
+    ul {
+      display: flex;
+      justify-content: space-between;
+      .fa-edit {
+        color: #FFF;
+        margin-right: 5px;
+      }
+      .fa-cog {
+        color: #FFF;
+      }
     }
   }
   &__group{
     padding: 20px 20px 0 20px;
-    &__set{
+    overflow: scroll;
+    &__set {
+      
       &__name{
         font-size: 15px;
         margin-bottom: 5px;
+        color: white;
       }
       &__coment{
         font-size: 11px;
         margin-bottom: 40px;
+        color: white;
       } 
     }
   }
@@ -81,6 +96,7 @@ body{
     background-color: #fafafa;
     padding: 46px 40px 0 40px;
     height: calc(100vh - 236px);
+    overflow: scroll;
     &__set {
       display: flex;
       &__name {
@@ -102,43 +118,105 @@ body{
     }
   }
   &__bottom {
-    display: flex;
-    justify-content: space-between;
     background-color: #ddd;
     padding: 20px 40px;
+    
+  .new_message {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
     &__text {
       height: 50px;
       width: calc(100% - 100px);
       display: flex;
       justify-content: space-between;
       position: relative;
-      input {
+      &__input {
         width: 100%;
         font-size: 16px;
         color: #434A54;
-        padding: 0px 10px;
-        margin-right: 15px;
       }
-        &__image{
-           i {
-            position: absolute;
-            right: 25px;
-            line-height: 50px;
-            height: 50px;
-          }
-          input {
-            display: none;
-          }
+      &__image{
+        i {
+          position: absolute;
+          right: 25px;
+          line-height: 50px;
+          height: 50px;
         }
+      }
     }
     &__send {
       height: 50px;
-      &__btn {
-        background-color: #38AEF0;
-        height: 50px;
-        width: 100px;
-        color: #FFFFFF;
-      }
+      background-color: #38AEF0;
+      width: 100px;
+      color: #FFFFFF;
+      margin-left: 15px;
     }
   }
 }
+}
+#message_content{
+  padding-left: 10px;
+}
+
+#message_image{
+display:none;
+}
+
+.input-form{
+width: 100%;
+}
+
+// &__bottom {
+//   background-color: #ddd;
+//   padding: 20px 40px;
+//   display: flex;
+//   justify-content: space-between;
+//   &__text {
+//     height: 50px;
+//     width: calc(100% - 100px);
+//     display: flex;
+//     justify-content: space-between;
+//     position: relative;
+//     &__input {
+//       width: 100%;
+//       font-size: 16px;
+//       color: #434A54;
+//       padding: 0px 10px;}
+//     &__image{
+//       i {
+//         position: absolute;
+//         right: 25px;
+//         line-height: 50px;
+//         height: 50px;
+//       input {
+//         display: none;
+//         }
+//       }
+//     }
+//   }
+//   &__send {
+//     height: 50px;
+//     background-color: #38AEF0;
+//     width: 100px;
+//     color: #FFFFFF;
+//     margin-left: 15px;
+
+//   }
+  
+// }
+// }
+
+// #new_message{
+// width: 100%;
+// display: flex;
+// justify-content: space-between;
+// }
+
+// #message_image{
+// display:none;
+// }
+
+// .input-form{
+// width: 100%;
+// }
