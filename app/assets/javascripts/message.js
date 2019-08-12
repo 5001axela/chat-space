@@ -32,12 +32,9 @@ $(function(){
       contentType: false
     })
     .done(function(data){
-      // console.log(data);
       var html = buildHTML(data);
       $('.rightcontents__main').append(html)
-      console.log(html);
-      $('.input-form').val('')
-      $('#message_image').val('')
+      $('#new_message')[0].reset();
       $('.new_message__send').attr('disabled', false);
       $('.rightcontents__main').animate({scrollTop: $('.rightcontents__main')[0].scrollHeight}, 'fast');
     })
