@@ -7,7 +7,8 @@
         .rightcontents__top__left__group
           = @group.name
         .rightcontents__top__left__name
-          Member: ニックネーム
+          Member:
+          = @user_name.join(' , ')
       .rightcontents__top__right
         =link_to edit_group_path(@group) do
           .rightcontents__top__right__edit
