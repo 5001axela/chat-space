@@ -36,5 +36,6 @@ class GroupsController < ApplicationController
 
   def set_group
     @group = Group.find(params[:id])
+    @users = User.where(id:[@group.users.ids]).where.not(name: current_user.name)
   end
 end
