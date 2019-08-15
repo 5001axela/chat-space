@@ -37,6 +37,29 @@ $(function(){
       $('#new_message')[0].reset();
       $('.new_message__send').attr('disabled', false);
       $('.rightcontents__main').animate({scrollTop: $('.rightcontents__main')[0].scrollHeight}, 'fast');
-    })
-  })
+    });
+  });
+  $(function() {
+      var reloadMessages = function() {
+      last_message_id = $('#comment_message:last-child').data('message_id');
+      $.ajax({
+        url: '/groups/group_id/messages/api/messages#index{format: "json"}',
+        type: 'get',
+        dataType: 'json',
+        data: {id: last_message_id}
+      })
+      .done(function(messages) {
+        var insertHTML = '';
+        messages.forEach(function(message){
+          insertHTML = buildHTML(message);
+          $('.rightcontents__main').append(insertHTML);
+          $('.rightcontents__main').animate({scrollTop: $('.rightcontents__main')[0].scrollHeight}, 'fast');
+        });
+      })
+      .fail(function() {
+        console.log('error');
+      });
+    };
+    setInterval(reloadMessages, 5000);
+  });
 })
