@@ -36,7 +36,7 @@ $(function() {
         });
       } 
     })
-    .fail(function(){
+    .fail(function(users){
       alert('該当する名前はありません');
     })
   });
