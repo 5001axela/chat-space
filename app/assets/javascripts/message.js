@@ -45,7 +45,7 @@ $(function(){
     if (window.location.href.match(/\/groups\/\d+\/messages/)){
       var reloadMessages = function() {
       var last_message_id = $('#comment_message:last-child').data('message');
-      console.log(last_message_id);
+      $('.rightcontents__main').animate({scrollTop: $('.rightcontents__main')[0].scrollHeight}, 'fast');
       $.ajax({
         url: 'api/messages#index {:format=>"json"}',
         type: 'get',
