@@ -38,7 +38,8 @@ $(function(){
       $('.rightcontents__main').animate({scrollTop: $('.rightcontents__main')[0].scrollHeight}, 'fast');
     })
     .fail(function() {
-      console.log('error');
+      alert('コード書いてください！！ by キチろう');
+      $('.new_message__send').attr('disabled', false);
     });
   });
   $(function() {
